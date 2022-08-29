@@ -16,36 +16,36 @@
     <div v-if="customizationMenuVisibility" class="customizationMenu-wrapper">
         <div class="hero-customization-contaiter">
             <div class="hero-color-row">
-                <div @click="isVisible = true" class="hero-color-item">
-                    <div v-if="isVisible" class="hero-color-item-click" />
+                <div @click="isVisible[0] = true" class="hero-color-item">
+                    <div v-if="isVisible[0]" class="hero-color-item-click" />
                 </div>
-                <div @click="isVisible = true" class="hero-color-item">
-                    <div v-if="isVisible" class="hero-color-item-click" />
+                <div @click="isVisible[1] = true" class="hero-color-item">
+                    <div v-if="isVisible[1]" class="hero-color-item-click" />
                 </div>
-                <div @click="isVisible = true" class="hero-color-item">
-                    <div v-if="isVisible" class="hero-color-item-click" />
-                </div>
-            </div>
-            <div class="hero-color-row">
-                <div @click="isVisible = true" class="hero-color-item">
-                    <div v-if="isVisible" class="hero-color-item-click" />
-                </div>
-                <div @click="isVisible = true" class="hero-color-item">
-                    <div v-if="isVisible" class="hero-color-item-click" />
-                </div>
-                <div @click="isVisible = true" class="hero-color-item">
-                    <div v-if="isVisible" class="hero-color-item-click" />
+                <div @click="isVisible[2] = true" class="hero-color-item">
+                    <div v-if="isVisible[2]" class="hero-color-item-click" />
                 </div>
             </div>
             <div class="hero-color-row">
-                <div @click="isVisible = true" class="hero-color-item">
-                    <div v-if="isVisible" class="hero-color-item-click" />
+                <div @click="isVisible[3] = true" class="hero-color-item">
+                    <div v-if="isVisible[3]" class="hero-color-item-click" />
                 </div>
-                <div @click="isVisible = true" class="hero-color-item">
-                    <div v-if="isVisible" class="hero-color-item-click" />
+                <div @click="isVisible[4] = true" class="hero-color-item">
+                    <div v-if="isVisible[4]" class="hero-color-item-click" />
                 </div>
-                <div @click="isVisible = true" class="hero-color-item">
-                    <div v-if="isVisible" class="hero-color-item-click" />
+                <div @click="isVisible[5] = true" class="hero-color-item">
+                    <div v-if="isVisible[5]" class="hero-color-item-click" />
+                </div>
+            </div>
+            <div class="hero-color-row">
+                <div @click="isVisible[6] = true" class="hero-color-item">
+                    <div v-if="isVisible[6]" class="hero-color-item-click" />
+                </div>
+                <div @click="isVisible[7] = true" class="hero-color-item">
+                    <div v-if="isVisible[7]" class="hero-color-item-click" />
+                </div>
+                <div @click="isVisible[8] = true" class="hero-color-item">
+                    <div v-if="isVisible[8]" class="hero-color-item-click" />
                 </div>
             </div>
         </div>
@@ -54,14 +54,17 @@
 </template>
 
 <script>
+    // isVisible.fill(false)
+    // console.log(isVisible[3])
+    // isVisible[0] = true;
 export default {
-    data() {
+    data(isVisible) {
         return {
             pause: "Пауза",
             pauseMenuVisibility: false, // поставить true для тоггла
             customizationMenuVisibility: true,
-            isVisible: false,
-
+            isVisible: [false, false, false, false, false, false, false, false, false],
+            
         }
     },
     methods: {
@@ -70,8 +73,7 @@ export default {
             this.customizationMenuVisibility = true;
             // или можно тоггл
             // this.inputVisibility = !this.inputVisibility;
-        }
-
+        },
     }   
 }
 </script>
@@ -97,8 +99,7 @@ body {
 	font-family: 'Pompiere', cursive;
 	font-weight: 200;
 }
-.pauseMenu-wrapper {
-}
+/* .pauseMenu-wrapper {} */
 .pauseMenu > p {
 	border: 0.1vh solid #000;
 }
@@ -130,7 +131,6 @@ body {
 	justify-content: center;
 }
 .hero-customization-contaiter {
-    /* border: 1vh solid #000; */
     display: flex;
     flex-direction: column;
 }
@@ -141,7 +141,6 @@ body {
 .hero-color-item {
     height: 13vh;
     width: 13vh;
-    /* background-color: rgb(40,40,40); */
     margin: 0.1vh;
 	border: 0.1vh solid #000;
 }
