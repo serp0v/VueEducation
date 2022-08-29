@@ -16,35 +16,35 @@
     <div v-if="customizationMenuVisibility" class="customizationMenu-wrapper">
         <div class="hero-customization-contaiter">
             <div class="hero-color-row">
-                <div @click="isVisible[0] = true" class="hero-color-item">
+                <div @click="isVisible[0] = !isVisible[0]" class="hero-color-item">
                     <div v-if="isVisible[0]" class="hero-color-item-click" />
                 </div>
-                <div @click="isVisible[1] = true" class="hero-color-item">
+                <div @click="isVisible[1] = !isVisible[1]" class="hero-color-item">
                     <div v-if="isVisible[1]" class="hero-color-item-click" />
                 </div>
-                <div @click="isVisible[2] = true" class="hero-color-item">
+                <div @click="isVisible[2] = !isVisible[2]" class="hero-color-item">
                     <div v-if="isVisible[2]" class="hero-color-item-click" />
                 </div>
             </div>
             <div class="hero-color-row">
-                <div @click="isVisible[3] = true" class="hero-color-item">
+                <div @click="isVisible[3] = !isVisible[3]" class="hero-color-item">
                     <div v-if="isVisible[3]" class="hero-color-item-click" />
                 </div>
-                <div @click="isVisible[4] = true" class="hero-color-item">
+                <div @click="isVisible[4] = !isVisible[4]" class="hero-color-item">
                     <div v-if="isVisible[4]" class="hero-color-item-click" />
                 </div>
-                <div @click="isVisible[5] = true" class="hero-color-item">
+                <div @click="isVisible[5] = !isVisible[5]" class="hero-color-item">
                     <div v-if="isVisible[5]" class="hero-color-item-click" />
                 </div>
             </div>
             <div class="hero-color-row">
-                <div @click="isVisible[6] = true" class="hero-color-item">
+                <div @click="isVisible[6] = !isVisible[6]" class="hero-color-item">
                     <div v-if="isVisible[6]" class="hero-color-item-click" />
                 </div>
-                <div @click="isVisible[7] = true" class="hero-color-item">
+                <div @click="isVisible[7] = !isVisible[7]" class="hero-color-item">
                     <div v-if="isVisible[7]" class="hero-color-item-click" />
                 </div>
-                <div @click="isVisible[8] = true" class="hero-color-item">
+                <div @click="isVisible[8] = !isVisible[8]" class="hero-color-item">
                     <div v-if="isVisible[8]" class="hero-color-item-click" />
                 </div>
             </div>
@@ -58,13 +58,12 @@
     // console.log(isVisible[3])
     // isVisible[0] = true;
 export default {
-    data(isVisible) {
+    data() {
         return {
             pause: "Пауза",
             pauseMenuVisibility: false, // поставить true для тоггла
             customizationMenuVisibility: true,
             isVisible: [false, false, false, false, false, false, false, false, false],
-            
         }
     },
     methods: {
@@ -74,6 +73,17 @@ export default {
             // или можно тоггл
             // this.inputVisibility = !this.inputVisibility;
         },
+        // selectToggle(){
+        //     this.isVisible[0] = !this.isVisible[0];
+        //     this.isVisible[1] = !this.isVisible[1];
+        //     this.isVisible[2] = !this.isVisible[2];
+        //     this.isVisible[3] = !this.isVisible[3];
+        //     this.isVisible[4] = !this.isVisible[4];
+        //     this.isVisible[5] = !this.isVisible[5];
+        //     this.isVisible[6] = !this.isVisible[6];
+        //     this.isVisible[7] = !this.isVisible[7];
+        //     this.isVisible[8] = !this.isVisible[8];
+        // }
     }   
 }
 </script>
