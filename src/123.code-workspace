@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "qwerty",
+			"path": ".."
+		},
+		{
+			"name": "PORTFOLIO",
+			"path": "../../Users/С#/Desktop/PORTFOLIO"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Bot schoolboy"
+	}
+}
